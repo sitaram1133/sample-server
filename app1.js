@@ -23,9 +23,6 @@ app.use(session({
 }));
 
 
-
-
-////////////////////////////////////////////////Phase 1/////////////////////////////////////////////////////////////
 MongoClient.connect(url, function(err, db) {
   var destinations;
   if (err) throw err;
@@ -50,10 +47,6 @@ MongoClient.connect(url, function(err, db) {
    });
     //db.close();
 });
-
-
-
-
 
 
 app.post('/userinfo', function (req, res) {
@@ -108,10 +101,10 @@ app.get('/', (req, res) => res.send('Welcome! to face recognization server'))
 //     console.log(`Server running at http://${host}:${port}/`);
 // })
 
-//////////////////////////////Over the Internet ///////////////////////////////////////////
+//////////////////////////////Over the Internet //////////////////////
 
 const PORT = process.env.PORT || 8154;
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}...`);
 });
-////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////
